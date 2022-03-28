@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+header {
+    clear: both;
+    background-color: #212121;
+    height: 80px;
+}
+footer {
+    clear: both;
+    background-color:#212121;
+    min-height: 50px;
+}
+.rodapé {
+    text-align: center;
+    font-size: 11px;
+    color: #E0DDAA;
+    padding: 30px;
+}
+.apresentacao {
+  color: #ffffff; 
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5px;
+  padding: 10px;
+}
+#principal {
+    clear: both;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    color: var(--glow-color);
+    background-color: var(--btn-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 1em 0em var(--glow-spread-color),
+            inset 0 0 .1em .20em var(--glow-color);
+    min-height: 505px;
+    padding: 100px 0 0 0;
+}
+.container {
+    width: 970px;
+    height: 400px;
+    margin: 0 auto;
+}
+/* botao */
+button[name="drop"]{
+    border: none;
+    cursor: pointer;
+    outline:none;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    position:relative;
+    transition: all 0.5s;
+    z-index: 1;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+   
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    color: var(--glow-color);
+    background-color: var(--btn-color);
+    box-shadow: 0 0 15em .20em var(--glow-color),
+            0 0 1em 0em var(--glow-spread-color),
+            inset 0 0 .70em .20em var(--glow-color);
+    z-index: -1;
+    transition: all 0.5s;
+}
+   
+button:hover::before {
+    width: 100%;
+}
+   
+button:hover {
+    color: black;
+}
+   
+button:active:before {
+    background: #b9b9b9;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 0px;
+  padding: 10px;
+  padding-top: 10px;
+}
+/* Logo */
+img {
+    float: left;
+    padding-left: 35%;
+}
+/*dropdown menu*/
+.menu-drop{
+    display: inline-block;
+    position: relative;
+  }
+  .drop-content{
+    display: none;
+    border-radius: 10px;
+    background: #242424;
+    box-shadow:  24px 24px 48px #0e0e0e,
+                 -24px -24px 48px #3a3a3a;
+    position: absolute;
+    z-index: 1;
+  }
+  .drop-content a{
+    color: white;
+    width: 140px;
+    height: 45px;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px ;
+    display:block;
+    text-align: center;
+  }
+  .drop-content a:hover{
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    color: var(--glow-color);
+    background-color: var(--btn-color);
+    box-shadow: 0 0 15em .20em var(--glow-color),
+    0 0 1em 0em var(--glow-spread-color),
+    inset 0 0 .70em .20em var(--glow-color);
+    z-index: -1;
+    transition: all 0.5s;
+    color: black;
+  }
+  .menu-drop:hover .drop-content{
+    display: block;
+}
+  .menu-drop:hover button[name="drop"]{
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    color: var(--glow-color);
+    background-color: var(--btn-color);
+    box-shadow: 0 0 15em .20em var(--glow-color),
+    0 0 1em 0em var(--glow-spread-color),
+    inset 0 0 .70em .20em var(--glow-color);
+    z-index: -1;
+    transition: all 0.5s;
+  }
+.cubic{
+    width: 100px;
+    height: 1px;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(150, 89, 207, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(94, 52, 133);
+    color: var(--glow-color);
+    background-color: var(--btn-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 1em 0em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+    position: absolute;
+    animation: mymove 1s infinite;
+    animation-timing-function: linear;
+}
+  
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 1340px;}
+}
+
+.glitch {
+  color: #ffffff;
+  position: relative;
+  font-size: 81px;
+  width: 970px;
+  margin: 3;
+  animation: glitch 3s 3s infinite;
+  text-align: center;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  overflow: hidden;
+  top: 0;
+  animation: glitchTop 2s linear infinite;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  overflow: hidden;
+  top: 0;
+  animation: glitchBotom 2.5s linear infinite;
+}
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+}
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+.apresentacao{
+  color: #ffffff; 
+  font-size: 20px;
+  margin: 0px 0 0 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type 7s steps(60, end); 
+  text-align: left;
+}
+.apresentacao:nth-child(2){
+  animation: type2 4s steps(60, end);
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width:50;}
+  100%{ width: 100; } 
+}
+@keyframes blink{
+  to{opacity: .0;}
+}
